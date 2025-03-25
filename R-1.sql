@@ -72,7 +72,8 @@ SELECT
  
 -- Q.5 Write a SQL query to find all transactions where the total_sale is greater than 1000.
 
-SELECT * FROM retail_sales
+SELECT * 
+FROM retail_sales
 WHERE total_sale > 100;
 
 -- Q.6 Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.
@@ -94,8 +95,13 @@ GROUP BY customer_id
 ORDER BY total_sales
 LIMIT 5;   
   
--- Q.8 Write a SQL query to find the number of unique customers who purchased items from each category. 
- 
+-- Q.8 Write a SQL query to find the number of unique customers who purchased items from each category.
+SELECT 
+      category, 
+      COUNT(DISTINCT customer_id) AS unique_customers
+FROM  retail_sales
+GROUP BY category; 
+ -- Q.9 Write a SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17)
  SELECT 
     CASE 
         WHEN HOUR(sale_time) <= 12 THEN 'Morning'
@@ -107,6 +113,7 @@ FROM
     retail_sales
 GROUP BY 
     shift;
-    
+
+
  -- END OF PROJECT--   
     
