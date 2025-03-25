@@ -71,6 +71,8 @@ WHERE
 ### 3. Data Analysis & Findings
 
 The following MYSQL queries were developed to answer specific business questions:
+
+
 -- Q.1 Write a SQL query to retrieve all columns for sales made on '2022-11-05
 
 SELECT *
