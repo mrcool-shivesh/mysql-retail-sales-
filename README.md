@@ -156,7 +156,7 @@ FROM
     retail_sales
 GROUP BY 
     shift;
-    shift;
+    
 ```
 
 ## Findings
